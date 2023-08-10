@@ -18,6 +18,18 @@ class HBNBCommand(cmd.Cmd):
         '''
         return True
 
+    def do_EOF(self, args):
+        '''
+            Exits after receiving the EOF signal.
+        '''
+        return True
+
+    def emptyline(self):
+        '''
+            Prevents printing anything when an empty line is passed.
+        '''
+        pass
+
 if __name__ == "__main__":
     '''
         Entry point for the loop.
